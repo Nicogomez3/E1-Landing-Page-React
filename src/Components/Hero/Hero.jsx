@@ -21,7 +21,7 @@ export const Hero = () => {
                 </ButtonBanner>
             </HeroText> 
             
-            <ImgBanner src="../../../public/Headphone.png" alt="" />
+            <ImgBanner src="/Headphone.png" alt="" />
             <BannerLinks>
               <hr />
               <a href="">
