@@ -6,12 +6,14 @@ export const HeaderStyles = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 0 30px 0 30px;
+
 `
 
 export const LogoStyles = styled.h1`
     font-size: 18px;
     font-weight: bold;
     color: white;
+
 `
 
 export const NavbarStyles = styled.nav`
@@ -87,5 +89,38 @@ export const MenuResponsive = styled.div`
         justify-content: center;
         align-items: center;
         cursor: pointer;
+    }
+`
+
+export const NavbarResponsive = styled.nav`
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #BF4F74;
+    padding: 20px;
+    border-radius: 14px;
+    height: 400px;
+    z-index: 10;
+    width: 100%;
+`
+
+export const NavbarItemsResponsive = styled.ul`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    height: 300px;
+
+`
+export const NavbarListResponsive = styled.li`
+   list-style-type: none;
+`
+
+export const NavbarLinksResponsive = styled.a`
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        font-weight: bold
     }
 `
