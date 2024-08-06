@@ -1,5 +1,5 @@
-import { ButtonContainer } from "../Products/ProductsStyles"
-import { ButtonCard, ButtonSection, Card, ImageCard, InfoCard, SpanPrice, } from "./ProductsStyles"
+import { ButtonContainer } from "../../pages/Home/Products/ProductsStyles"
+import { ButtonCard, ButtonSection, Card, ImageCard, InfoCard, SpanPrice, } from "../../pages/Home/Products/ProductsStyles"
 
 export const ProductCard = (props) => {
  console.log(props)

@@ -1,7 +1,7 @@
-import { ButtonCard, Card, ImageCard, InfoCard, SectionCard } from "./ProductsStyles"
+import { ButtonCard, Card, ImageCard, InfoCard, SectionCard } from "../../pages/Home/Products/ProductsStyles"
 import { Products } from "../../Data/Products"
 import { ProductCard } from "./ProductCard"
-import { CardContainer } from "../Products/ProductsStyles"
+import { CardContainer } from "../../pages/Home/Products/ProductsStyles"
 
 
 export const Producto = () => {
