@@ -11,7 +11,7 @@ export const ContactStyles = styled.div`
 `
 
 export const FormStyles = styled.form`
-    background: url("/marissa-grootes-vdaJJbls3xE-unsplash.jpg") center/cover no-repeat;
+    background: url('/marissa-grootes-vdaJJbls3xE-unsplash.jpg') center/cover no-repeat;
     width: 100%;
 
     border-radius: 10px;
