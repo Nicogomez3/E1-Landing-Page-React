@@ -2,6 +2,7 @@ import { FooterContainer, FooterItems, FooterLinks } from "./FooterStyles"
 
 
 export const Footer = () => {
+
   return (
     <>
         <FooterContainer>
