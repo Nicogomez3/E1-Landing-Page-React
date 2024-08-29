@@ -1,5 +1,6 @@
 
 
+import { MenuProvider } from "./Context/MenuContext"
 import { GlobalStyles } from "./GlobalStyles/GlobalStyles"
 import Routes from "./routes/Routes"
 
@@ -14,8 +15,11 @@ function App() {
         @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
       </style>
       {/* ---------------------------------- */}
-      <Routes/>
-      <GlobalStyles/>
+      <MenuProvider> 
+        <Routes/>
+        <GlobalStyles/>
+      </MenuProvider>
+      
     </>
   )
 }

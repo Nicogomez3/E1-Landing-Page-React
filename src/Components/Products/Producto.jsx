@@ -8,7 +8,7 @@ export const Producto = () => {
   return (
     <>
     <SectionCard>
-      <h2>Productos destacados</h2>
+      <h2>Productos Destacados</h2>
 
       <CardContainer>
       {Products.map(product => (

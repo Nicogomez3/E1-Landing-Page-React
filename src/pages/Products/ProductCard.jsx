@@ -1,9 +1,14 @@
+import { useDispatch } from "react-redux"
 import { ButtonContainer } from "./ProductsStyles"
 import { ButtonCard, ButtonSection, Card, ImageCard, InfoCard, SpanPrice, } from "./ProductsStyles"
+import { addToCart } from "../../redux/cartSlice"
 
-export const ProductCard = (props) => {
- console.log(props)
-    const {img, title, prize, desc} = props
+export const ProductCard = ({img, title, prize, desc, id}) => {
+
+   
+
+    const dispatch = useDispatch()
+
     return (
       <>
       <Card>
@@ -17,7 +22,7 @@ export const ProductCard = (props) => {
           <p> {desc} </p>
           <ButtonContainer>
             <ButtonCard whileTap={{ scale: 0.95}} $primary>Ver mas</ButtonCard>
-            <ButtonCard whileTap={{ scale: 0.95}} >Comprar</ButtonCard>
+            <ButtonCard onClick={()=> dispatch(addToCart({img, title, prize, desc, id}))} whileTap={{ scale: 0.95}} >Comprar</ButtonCard>
 
           </ButtonContainer>
           

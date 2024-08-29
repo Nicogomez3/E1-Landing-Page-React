@@ -1,11 +1,11 @@
-export const Products = [
+export const products = [
     {
         id: 1,
         title: "Motorola G24",
         img: "/g24.png",
         desc: "128gb / 4GB Ram",
-        prize: '250.000',
-        categoria: "Celular",
+        prize: '250000',
+        category: "Celulares",
 
     },
     {
@@ -13,8 +13,8 @@ export const Products = [
         title: "Motorola Edge 40",
         img: "/edge40.png",
         desc: "256gb / 8GB Ram",
-        prize: '500.000',
-        categoria: "Celular",
+        prize: '500000',
+        category: "Celulares",
 
     },
     {
@@ -22,8 +22,8 @@ export const Products = [
         title: "Samsung S24",
         img: "/s24.png",
         desc: "256GB / 8GB Ram",
-        prize: '1.500.000',
-        categoria: "Celular",
+        prize: '1500000',
+        category: "Celulares",
 
     },
     {
@@ -31,8 +31,8 @@ export const Products = [
         title: "Auriculares Beats - Black",
         img: "Headphone.png",
         desc: "Auris para escuchar musiquita",
-        prize: '300.000',
-        categoria: "Auriculares",
+        prize: '300000',
+        category: "Auriculares",
 
     },
     {
@@ -40,8 +40,8 @@ export const Products = [
         title: "JBL Tune 225 TWS",
         img: "/JBL_TUNE-225TWS.png",
         desc: "Auris para escuchar musiquita",
-        prize: '90.000',
-        categoria: "Auriculares",
+        prize: '90000',
+        category: "Auriculares",
 
     },
     {
@@ -49,8 +49,8 @@ export const Products = [
         title: "Samsung Galaxy Buds Pro",
         img: "/samsung-galaxy-buds-pro.png",
         desc: "Auris para escuchar musiquita",
-        prize: '250.000',
-        categoria: "Auriculares",
+        prize: '250000',
+        category: "Auriculares",
 
     },
     {
@@ -58,8 +58,8 @@ export const Products = [
         title: "Samsung Galaxy Buds Pro 2",
         img: "/samsung-buds-pro2.png",
         desc: "Auris para escuchar musiquita",
-        prize: '400.000',
-        categoria: "Auriculares",
+        prize: '400000',
+        category: "Auriculares",
 
     },
     {
@@ -67,8 +67,8 @@ export const Products = [
         title: "HYUNDAI 50' 4K",
         img: "/hyundai-50-4k.png",
         desc: "Tv 50' 4k",
-        prize: '600.000',
-        categoria: "TV y Monitores",
+        prize: '600000',
+        category: "Televisores",
 
     },
     {
@@ -76,8 +76,8 @@ export const Products = [
         title: "Samsung Curved 32' ",
         img: "/samsung-curved-32.png",
         desc: "Monitor Curvo 32'",
-        prize: '300.000',
-        categoria: "TV y Monitores",
+        prize: '300000',
+        category: "Televisores",
 
     },
     {
@@ -85,8 +85,8 @@ export const Products = [
         title: "TCL 55' 4K UHD ",
         img: "/tvtcl55.png",
         desc: "TV 55' 4k Android Tv",
-        prize: '300.000',
-        categoria: "Auriculares",
+        prize: '300000',
+        category: "Televisores",
 
     },
     {
@@ -94,8 +94,8 @@ export const Products = [
         title: "Philips Air Fryer ",
         img: "/philips-air-fryer.png",
         desc: "Freidora",
-        prize: '300.000',
-        categoria: "Electrodomestico",
+        prize: '300000',
+        category: "Electrodomesticos",
 
     },
     {
@@ -103,8 +103,20 @@ export const Products = [
         title: "Whirlpool Micro Wave",
         img: "/whirlpool-microwave.png",
         desc: "Microondas Whirlpool",
-        prize: '300.000',
-        categoria: "Electrodomesticos",
+        prize: '300000',
+        category: "Electrodomesticos",
 
     },
 ]
+
+ export const TotalProducts = products.length;
+
+ export const Products = products.reduce((acc, product) => {
+   if (!acc[product.category]) {
+     acc[product.category] = [];
+   }
+
+   acc[product.category] = [...acc[product.category], product];
+
+   return acc;
+ }, {});
