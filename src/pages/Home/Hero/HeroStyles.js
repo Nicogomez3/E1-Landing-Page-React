@@ -6,7 +6,7 @@ export const HeroStyles = styled.section`
     justify-content: center;
     align-items: center;
     gap: 100px;
-    
+    margin-top: 60px;
     height: auto;
     padding: 50px;
     background-color: #131415;

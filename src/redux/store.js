@@ -5,13 +5,13 @@ import storage from "redux-persist/lib/storage";
 import cartReducer from "../redux/cartSlice";
 import categoriesReducer from "./categoriesSlice/categoriesSlice";
 import productsReducer from "./productSlice";
-// import recommendedReducer from "./recommended/recommendedSlice";
+import recommendedReducer from "./recommendedSlice";
 
 const reducers = combineReducers({
   // ... recomendados / categorias / productos / carrito / user
   categories: categoriesReducer,
   products: productsReducer,
-//   recommended: recommendedReducer,
+  recommended: recommendedReducer,
   cart: cartReducer,
 });
 

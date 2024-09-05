@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const CategoriesContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     gap: 8px;
@@ -18,12 +19,13 @@ export const CategoriesCards = styled(motion.div)`
     width: 200px;
     padding: 8px 2px;
 
-    background-color: #BF4F74;
+    background-color:  ${({ selected }) =>
+    selected ? '#BF4F74' : '#403d39'};    ;
     border-radius: 12px;
     cursor: pointer;
 
-    & h2 {
-        font-size: 14px;
+    & h3 {
+        font-size: 16px;
         color: white;
     }
 
@@ -31,5 +33,18 @@ export const CategoriesCards = styled(motion.div)`
         width: 100px;
         height: 100px;
         border-radius: 50%;
+    }
+
+    @media(max-width: 768px) {
+        width: 150px;
+        padding: 8px 2px;
+
+        & h3 {
+            font-size: 14px;
+        }
+
+        & img {
+            display: none;
+        }
     }
 `

@@ -1,5 +1,5 @@
 import { PiShoppingCartLight } from "react-icons/pi";
-import { NavbarItemsStyles } from "../HeaderStyles";
+import { CartIconContainer, NavbarItemsStyles, NavbarStyles } from "../HeaderStyles";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleHiddenCart } from "../../../../redux/cartSlice";
 
@@ -14,10 +14,13 @@ const Cart = () => {
     
     0);
   return (
-    <NavbarItemsStyles onClick={() => dispatch(toggleHiddenCart())}>
+    <NavbarStyles onClick={() => dispatch(toggleHiddenCart())}>
+      <CartIconContainer whileTap={{scale: 0.95}}>
         <PiShoppingCartLight />
         <span> {totalCartItems} </span>
-    </NavbarItemsStyles>
+
+      </CartIconContainer>
+    </NavbarStyles>
   );
 };
 

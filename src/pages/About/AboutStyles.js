@@ -7,9 +7,10 @@ export const AboutStyles = styled.div`
     justify-content: center;
     align-items: center;
     gap: 10px;
-
+    margin-top: 90px;
     & h2 {
         font-size: 52px;
+        margin: 0;
     }
 
     & p {

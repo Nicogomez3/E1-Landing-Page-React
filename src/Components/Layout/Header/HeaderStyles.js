@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom"
 import {styled } from "styled-components"
 
@@ -9,6 +10,13 @@ export const HeaderStyles = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 0 30px 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 70px;
+  max-width: 100%;
 
 `
 
@@ -18,14 +26,13 @@ export const LogoStyles = styled.h1`
     color: white;
 `
 
-
+export const CartIconContainer = styled(motion.div)`
+`
 
 
  export const NavbarStyles = styled.nav`
-   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
-   @media (min-width: 768px) {
-     display: flex;
-   }
+  display: flex;  
+  align-items: center;
  `;
 
 // export const NavbarItemsStyles = styled.ul`
@@ -43,12 +50,23 @@ export const LogoStyles = styled.h1`
 
 export const NavbarItemsStyles = styled.ul`
   display: flex;
-  flex-direction: column;
+ 
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
-  @media (min-width: 768px) {
-    flex-direction: row;
+
+
+  @media (max-width: 768px) {
+    display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+    position: absolute;
+    flex-direction: column;
+    background-color: #BF4F74;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    top: 70px;
+    width: 100%;
+    left: 0;
+    z-index: 10;
   }
 `;
 
@@ -82,18 +100,41 @@ export const NavbarItemsStyles = styled.ul`
 // `
 
 export const CartStyles = styled.div`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin-top: 1rem;
-  @media (min-width: 768px) {
-    margin-top: 0;
+   position: relative;
+   cursor: pointer;
+   color: white;
+   font-size: 24px;
+   & span {
+     position: absolute;
+     top: -5px;
+    
+     left: 13px;
+     height: 15px;
+     width: 15px;
+     text-align: center;
+
+     border-radius: 1rem;
+     border: 1px solid white;
+     color: #BF4F74;
+     background-color: white;
+     font-size: 0.9rem;
+    }
+  margin-top: 0;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
   }
 `;
 
-export const MenuButton = styled.div`
+export const MenuButton = styled(motion.div)`
   display: block;
   cursor: pointer;
+  color: white;
+  font-size: 24px;
+  position: relative;
   @media (min-width: 768px) {
     display: none;
   }

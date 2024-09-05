@@ -14,7 +14,7 @@ const Categoria = ({name, image, category}) => {
         onClick={() => dispatch(selectCategory(category))}
     >
         <img src={image} alt={category}/>
-        <h2> {name} </h2>
+        <h3> {name} </h3>
     </CategoriesCards>
   )
 }

@@ -49,11 +49,13 @@ export const Header = () => {
               LUXURY
               <hr />
             </LogoStyles>
-            <MenuButton onClick={() => toggleMenu(!isOpen)}>
-              <FiMenu  />
-            </MenuButton>
-            <NavbarStyles isOpen={isOpen} ref={menuRef}>
-                <NavbarItemsStyles>
+            
+            <NavbarStyles  >
+              <MenuButton ref={menuRef} whileTap={{scale: 0.95}} onClick={() => toggleMenu(!isOpen)}>
+                <FiMenu  />
+              </MenuButton>
+            
+                <NavbarItemsStyles isOpen={isOpen}>
                     <NavbarListStyles>
                       
                       <NavbarLinksStyles to="/">Inicio</NavbarLinksStyles>
@@ -73,16 +75,17 @@ export const Header = () => {
                       
                       <NavbarLinksStyles to="/product">Productos</NavbarLinksStyles>
                       
-                      </NavbarListStyles>
-
-                      <CartStyles>
-                      
-                        <Cart />
-                      
-                      </CartStyles>
+                    </NavbarListStyles>
 
                 </NavbarItemsStyles>
+                <CartStyles>
+                      
+                   <Cart />
+                    
+                </CartStyles>
+
             </NavbarStyles>
+            
 {/*            
                 <MenuResponsive ref={menuRef}>
                 

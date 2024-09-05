@@ -9,7 +9,7 @@ export const SectionCard = styled.section`
 
  & h2 {
     font-size: 52px;
-    margin-top: 60px;
+    margin-top: 90px;
     text-align: center;
 
     @media (max-width: 578px) {

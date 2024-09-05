@@ -31,6 +31,11 @@ export const ModalCartStyles = styled.div`
   background-color: #1a1a1a;
   border-radius: 0 0 0 1rem;
   box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.3);
+
+  @media(max-width: 768px) {
+    width: 70%;
+
+  }
 `
 
 export const CloseButtonContainerStyles = styled.div`
@@ -65,6 +70,8 @@ export const TitlesStyles = styled.div`
     margin-top: 0;
     color: white;
   }
+
+
 `
 
 
@@ -116,6 +123,11 @@ export const CardStyles = styled.div`
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   border-radius: 15px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+   
+  }
 `
 
 export const ImgCartCardStyles = styled.img`
@@ -130,8 +142,10 @@ export const CartItemsStyles = styled.div`
 export const InfoContainerStyles = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 5px;
   width: 190px;
+
   & h3 {
     margin: 0;
     margin-bottom: 2px;
@@ -152,6 +166,10 @@ export const InfoContainerStyles = styled.div`
     background: linear-gradient(90deg, #FFC593 0%, #BC7198 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
   }
 `
 export const QuantityContainerStyles = styled.div`
@@ -207,6 +225,12 @@ export const TotalStyles = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  & span {
+    background: linear-gradient(90deg, #FFC593 0%, #BC7198 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 `
 
 export const SentStyles = styled(TotalStyles)``;
